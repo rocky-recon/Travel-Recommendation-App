@@ -219,8 +219,8 @@ img.animated_gif {
 }
 
 .container {
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 20rem;
+  margin-left: 20rem;
   padding-left: 15px;
   padding-right: 15px;
 }
