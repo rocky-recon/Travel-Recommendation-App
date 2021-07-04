@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Materialize icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Title for our website name -->
+    <title>Travel Recommendation App</title>
+  </head>
+
+  <!-- Body needs to have a shortcut to Colorzilla as an extension/add-on. Reference: https://twitter.com/brianpemberton/status/201455628143689728  -->
+  <body cz-shortcut-listen="true">
+    <!-- Title of the page needs to be in the center and container in order to leave no white space on the webpage -->
+    <div
+      id="title title_container"
+      class="
+        fluid_container
+        d_grid
+        gap_3
+        align_items_center
+        animated
+        fadeInUp
+        tofade
+      "
+    >
+      <!-- image needs to be flex and shrank to fit on the right hand side of the webpage -->
+      <div class="flex_shrink_0">
+        <img
+          class="animated_gif"
+          src="https://media.giphy.com/media/cXVkE2JNKIBqhhiBCZ/giphy.gif"
+        />
+      </div>
+
+      <div class="text-center">
+        <h1 class="sticky-top">Pick your next Destination</h1>
+      </div>
+    </div>
+    <section class="fluid_container">
+      <div id="outter_container" class="half_block totop_wrapper fadeInUp">
+        <div class="panel container align_items_center" id="form_container">
+          <form action="" id="userInputForm">
+            <label for="destination" class="btn btn_bright fw_bold"
+              >Destination
+             </label
+            >
+            <p class="tooltip"> <span class="tooltiptext">Enter City and State/Country</span></p>
+            <input
+              required
+              minlength="2"
+              type="text"
+              id="destination"
+              name="destination"
+              placeholder="Enter the name of the destination"
+            />
+            
+
+            <label for="location" class="btn btn_bright fw_bold"
+              >Location</label
+            >
+            <input
+              required
+              minlength="2"
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Where is it located"
+            />
+
+            <button type="click" id="myBtn" class="btn btn_light fw_bold">
+              Put it in your list
+            </button>
+            <button type="click" id="done" class="btn btn_light fw_bold">
+              <a onclick="location.href='#second_container'">See Your List</a>
+              <br />
+              <i class="large material-icons right">send</i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="tofade animated fadInUp fluid_container row-1">
+      <div class="row half_block">
+        <div
+          class="text-center panel container animated flipInY"
+          id="second_container"
+        >
+          
+            <div id="cards_container"></div>
+         
+        </div>
+      </div>
+    </section>
+    <section>
+      <div>
+        <div
+          class="text-center panel container half_block animated flipInY"
+          id="third_container"
+        >
+          <div id="third_card_container form_container">
+                </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer" class="tofade animated fadInUp">
+      <div class="footbackground">
+        <p>
+          "This is a Free 99 product"
+          <br />
+          "12811 SE 32nd St Ste 200, Bellevue, WA 98005"
+        </p>
+      </div>
+    </footer>
+    <!-- Javascript file -->
+    <script src="./script.js"></script>
+  </body>
+</html>
