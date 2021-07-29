@@ -53,12 +53,12 @@ async function createCards() {
   document.getElementById("cards_container").innerHTML = "";
 
   const card = document.createElement("div");
-  //   card.classList.add("second_card_container");
-  const uList = document.createElement("ul");
-  uList.classList.add("display-flex-row", "relative_position");
+  card.classList.add("justify-content-center");
+  const uList = document.createElement("div");
+  uList.classList.add("relative_position");
 
   for (let i = 0; i < currentArray.length; i++) {
-    const pictureList = document.createElement("li");
+    const pictureList = document.createElement("div");
     pictureList.classList.add("half_block_2", "card");
     if (i === 0) {
       pictureList.classList.add("top_card");
@@ -69,8 +69,8 @@ async function createCards() {
       <h5 class="card-title" id="final_dest">${currentArray[i].destination}</h5>
       <p class="card-text">${currentArray[i].location}</p>
  
-      <a href="#" btn_type="like" class="btn btn_bright padding_margin btn-floating btn-large  pulse" uniqueID="${currentArray[i]._id}">Like</a>
-      <a href="#" btn_type="dislike" class="btn btn-danger padding_margin btn-floating btn-large pulse" uniqueID="diskile-btn-${currentArray[i]._id}">Dislike</a>
+      <a href="#" btn_type="like" class="btn btn_bright btn-floating btn-large  pulse" uniqueID="${currentArray[i]._id}">Like</a>
+      <a href="#" btn_type="dislike" class="btn btn-danger btn-floating btn-large pulse" uniqueID="diskile-btn-${currentArray[i]._id}">Dislike</a>
   `;
     uList.appendChild(pictureList);
   }
@@ -134,28 +134,23 @@ function resetForm() {
   document.getElementById("location").value = "";
 }
 
-//checks if like or dislike button is clicked
-// document
-//   .getElementById("third_container")
-//   .addEventListener("click", likeToList);
-
 // this will grab the liked cards and into a list with travel advisor hyperlink
 async function likeToList(destination, location, recommendationURL) {
-  const card = document.createElement("ul");
+  const card2 = document.createElement("div");
+  card2.classList.add("justify-content-center");
 
-  const liList = document.createElement("li");
-  //   liList.innerText = `${destination}, ${location}`;
+  const liList = document.createElement("ul");
   liList.classList.add("display_createCards_list");
 
   const travelAdvisor = document.createElement("li");
-  travelAdvisor.innerHTML = `<li class="line_size fw_bold margin">Recommendations!</li><li class="fw_bold margin">${destination}</li>
-  <li class="lh1 fw_bold margin"> ${location}</li>
-    <a href="${recommendationURL}" btn_type="like" class="btn btn_bright padding_margin" target="_blank "> <i class="medium material-icons right">send</i> Travel Advisor</a>
+  travelAdvisor.innerHTML = `<h4 class="card-title">Recommendations!</h4><p class="fw_bold margin">${destination}</p>
+  <p class="card-text"> ${location}</p>
+    <a href="${recommendationURL}" btn_type="like" class="btn btn_bright" target="_blank ">  Travel Advisor</a>
 `;
   liList.appendChild(travelAdvisor);
 
-  card.appendChild(liList);
-  document.getElementById("third_container").appendChild(card);
+  card2.appendChild(liList);
+  document.getElementById("third_container").appendChild(card2);
 }
 
 //checks if click button hyperlink is clicked
