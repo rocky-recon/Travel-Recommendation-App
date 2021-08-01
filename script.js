@@ -65,7 +65,7 @@ async function createCards() {
     }
     pictureList.innerHTML = `
     <h4 class="card-title">Destinations</h4>
-    <img class="card-img-top fixed_height" src=${currentArray[i].picture}>
+    <img class="card-img-top" src=${currentArray[i].picture}>
       <h5 class="card-title" id="final_dest">${currentArray[i].destination}</h5>
       <p class="card-text">${currentArray[i].location}</p>
  

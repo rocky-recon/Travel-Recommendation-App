@@ -13,6 +13,7 @@ body {
   background-size: cover;
   overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
+  color: #E94E10;
 }
 
 /* Title information and first container */
@@ -20,6 +21,8 @@ body {
   text-align: center;
   width: 100%;
   height: 100%;
+  font-size: bolder;
+  font-style: oblique;
 }
 
 /* Destination, Location, List and see list container */
@@ -27,46 +30,47 @@ body {
   align-items: center;
   width: 100vw;
   height: auto;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .half_block_2 {
   position: absolute;
-  margin-left: 32%;
-  width: 25vw;
 }
 
 .top_card {
   z-index: 100;
+  /* height: 50vh; */
+  width: 50vw;
 }
 
 .relative_position {
   position: relative;
   /* height: 50vh;
   margin: 0 0 0 3rem; */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* top: 50%; */
+  left: 25%;
+  /* transform: translate(-50%, -50%); */
 }
 
 #cards_container {
-  color: rgb(233, 139, 16);
-  height: 50vh;
+  color: 	#E98B10;
+  height: 100vh;
   text-align: center;
   margin-bottom: 3rem;
+  align-items: center;
 }
 
 #third_container {
-  color: rgb(233, 139, 16);
+  color: #E98B10;
   text-align: center;
 }
 
 .display_createCards_list {
   font-size: 20px;
   font-weight: 700 !important;
-  color: rgb(233, 139, 16);
-  background-color: rgb(97, 109, 46);
-  border-color: #ffffff;
+  color: #FFFBF6;
+  background-color: #0BA060;
+  border-color: #FFFBF6;
   list-style-type: none;
   border-radius: 5px;
   padding: 1rem;
@@ -83,21 +87,21 @@ body {
   vertical-align: middle;
   text-align: center;
   letter-spacing: 2px;
-  border: 2px solid #666;
+  border: 2px solid #FFFBF6;
   font-family: "brandon_grotesqueblack";
   font-weight: normal;
 }
 
 .btn_light {
-  color: rgb(233, 139, 16);
+  color: #FFFBF6;
   background-color: rgb(97, 109, 46);
-  border-color: #ffffff;
+  border-color: #FFFBF6;
 }
 
 .btn_bright {
-  color: rgb(17, 11, 2);
-  background-color: rgb(233, 139, 16);
-  border-color: rgb(233, 139, 16);
+  color: #FFFBF6;
+  background-color: #E98B10;
+  border-color: #FFFBF6;
 }
 .tooltip {
   position: relative;
@@ -109,7 +113,7 @@ body {
   visibility: hidden;
   width: 120px;
   background-color: black;
-  color: #fff;
+  color: #FFFBF6;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -132,9 +136,9 @@ form {
 }
 
 #footer {
-  color: #fff;
+  color: #FFFBF6;
   text-align: center;
-  font-size: 10px;
+  font-size: .75rem;
   letter-spacing: 3px;
   font-family: "brandon_grotesquebold";
   font-weight: normal;
@@ -142,5 +146,5 @@ form {
 }
 
 .footbackground {
-  background-color: teal;
+  background-color: #1D4232;
 }
